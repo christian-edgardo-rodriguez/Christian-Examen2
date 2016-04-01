@@ -1,4 +1,5 @@
 #include "node.hpp"
+#include "list.hpp"
 #include "person.hpp"
 
 using namespace std;
@@ -7,16 +8,16 @@ List::List(){
 
 }
 List::List(Person persona){
-
+	head=new Node(persona);
 }
 List::~List(){
 
 }
 void List::setHead(Person persona){
-
+	head=new Node(persona);
 }
 Person List::getHead(){
-
+	return head->getValue();
 }
 void List::insert(int posicion, Person persona){
 

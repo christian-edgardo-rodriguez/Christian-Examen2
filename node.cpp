@@ -1,12 +1,13 @@
 #include <string>
 #include "person.hpp"
+#include "node.hpp"
 
 using namespace std;
 
 Node::Node(){
 
 }
-Node::Node(Person persona){
+Node::Node(Person persona):persona(persona){
 
 }
 Node::~Node(){
