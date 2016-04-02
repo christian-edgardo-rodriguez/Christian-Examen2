@@ -8,10 +8,11 @@ Node::Node(){
 
 }
 Node::Node(Person persona):persona(persona){
-	next=new Node(persona);
+	next=new Node();
+	setValue(persona);
 }
 Node::~Node(){
-
+	delete next;
 }
 Person Node::getValue(){
 	return persona;
@@ -19,8 +20,9 @@ Person Node::getValue(){
 Node* Node::getNext(){
 	return next;
 }
-void Node::setValue(Person newPersona){
-	persona=newPersona;
+void Node::setValue(Person persona){
+	this->persona.setName(persona.getName());
+	this->persona.setPhone(persona.getPhone());
 }
 void Node::setNext(Node* next){
 	this->next=next;
